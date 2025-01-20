@@ -1,4 +1,4 @@
-import { Character } from '@/app/interfaces'
+import { Character } from '@/interfaces'
 import React from 'react'
 import { CharacterCard } from './CharacterCard'
 

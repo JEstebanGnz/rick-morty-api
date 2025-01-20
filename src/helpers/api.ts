@@ -1,4 +1,4 @@
-import { Character } from '../app/interfaces/characters/characters-response';
+import { Character } from '../interfaces/characters/characters-response';
 
 export const getAllCharacters = async (): Promise<Character[]> => {
     const response = await fetch('https://rickandmortyapi.com/api/character')

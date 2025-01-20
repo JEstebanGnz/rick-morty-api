@@ -16,6 +16,9 @@ export default async function page({ params }: Props) {
 
     const character = await getCharacterById(id)
 
+
+
+
     return (
         <div>
 

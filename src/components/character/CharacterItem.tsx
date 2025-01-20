@@ -1,4 +1,4 @@
-import { Character } from '@/app/interfaces'
+import { Character } from '@/interfaces'
 import { formatDate, getStatusColor } from '@/helpers/character-info/characterInfo';
 import Image from 'next/image';
 import React from 'react'
