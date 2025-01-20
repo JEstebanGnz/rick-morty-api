@@ -9,6 +9,7 @@ export const getAllCharacters = async (): Promise<Character[]> => {
     const { results } = await response.json();
     return results;
   } catch (error) {
+    console.log(`Got this error ${error}`)
     return []; 
   }
 }
@@ -21,6 +22,7 @@ export const getCharacterById = async (id: string): Promise<Character | null> =>
     }
     return await response.json();
   } catch (error) {
+    console.log(`Got this error ${error}`)
     return null; // Return null on error
   }
 }

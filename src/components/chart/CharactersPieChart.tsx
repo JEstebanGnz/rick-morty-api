@@ -29,7 +29,7 @@ export function CharactersPieChart({chartData, property}: Props) {
 
 const totalCharacters = React.useMemo(() => {
   return chartData.reduce((acc, curr) => acc + curr.count, 0)
-}, [])
+}, [chartData])
 
   return (
     <Card className="flex flex-col p-10">
