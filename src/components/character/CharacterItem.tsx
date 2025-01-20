@@ -9,7 +9,6 @@ interface Props {
 
 export const CharacterItem = ({character}: Props) => {
   
-   
     return (
         <div className="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="relative w-full h-[400px]">
@@ -72,7 +71,7 @@ export const CharacterItem = ({character}: Props) => {
                 {/* Episodes Count */}
                 <div className="mt-8 text-center">
                     <div className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                        Appears in {character.episode.length} episodes
+                        Appears in {character.episode.length} episode(s)
                     </div>
                 </div>
             </div>

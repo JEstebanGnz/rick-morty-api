@@ -1,14 +1,12 @@
 "use client"
 
 import * as React from "react"
-import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -18,28 +16,26 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import { PieChartData } from "@/interfaces/chart-data/ChartData"
 
 interface Props {
-  chartData: any,
+  chartData: PieChartData[],
   property: string
 }
 
+const chartConfig = {} satisfies ChartConfig  
+
 export function CharactersPieChart({chartData, property}: Props) {
 
-const chartConfig = {
-
-
-} satisfies ChartConfig
-
-  const totalVisitors = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.count, 0)
-  }, [])
+const totalCharacters = React.useMemo(() => {
+  return chartData.reduce((acc, curr) => acc + curr.count, 0)
+}, [])
 
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Donut with Text</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{`Pie Chart Analysis by ${property}`}</CardTitle>
+        <CardDescription>Rick and Morty API Characters</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -73,14 +69,14 @@ const chartConfig = {
                           y={viewBox.cy}
                           className="fill-foreground text-3xl font-bold"
                         >
-                          {totalVisitors.toLocaleString()}
+                          {totalCharacters}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Personajes
+                          Characters
                         </tspan>
                       </text>
                     )

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { titleFont } from "@/config/fonts";
+import { Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Rick-Morty-API",
@@ -15,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${titleFont.className} antialiased pt-5`}
+        className={` ${titleFont.className} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

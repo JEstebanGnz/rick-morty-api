@@ -1,15 +1,19 @@
 'use client'
-
 import { Character } from '@/interfaces';
-import React from 'react'
+import { useState } from 'react';
 
-export const PropertyDropdown = () => {
+interface Props{
+    onPropertyChange: (property: keyof Character) => void
+}
 
-    const [selectedProperty, setSelectedProperty] = React.useState<keyof Character>('gender');
+export const PropertyDropdown = ({onPropertyChange}: Props) => {
+
+    const handlePropertyChange = (e: React.ChangeEvent<HTMLSelectElement>) =>{
+        onPropertyChange(e.target.value as keyof Character)
+    }
 
     return (
         <div>
-
             <h1 className="text-center text-2xl font-bold mb-10">Character Statistics</h1>
             {/* Dropdown to select property */}
             <div className="mb-4">
@@ -18,8 +22,7 @@ export const PropertyDropdown = () => {
                 </label>
                 <select
                     id="property"
-                    value={selectedProperty}
-                    onChange={(e) => setSelectedProperty(e.target.value as keyof Character)}
+                    onChange={handlePropertyChange}
                     className="border rounded px-2 py-1"
                 >
                     <option value="gender">Gender</option>
@@ -27,8 +30,6 @@ export const PropertyDropdown = () => {
                     <option value="species">Species</option>
                 </select>
             </div>
-
-
         </div>
     )
 }

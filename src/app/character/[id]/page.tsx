@@ -18,9 +18,10 @@ export default async function page({ params }: Props) {
 
 
 
-
     return (
         <div>
+
+
 
             <CharacterItem character={character} />
 

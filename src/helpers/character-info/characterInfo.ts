@@ -7,7 +7,6 @@ export const formatDate = (createdDate: string): string => {
     });
 };
 
-
 export const getStatusColor = (characterStatus: string): string => {
     switch (characterStatus.toLowerCase()) {
         case 'alive':
