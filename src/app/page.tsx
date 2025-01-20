@@ -8,8 +8,7 @@ export default async function Home() {
   return (
     <div>
       <h1 className="text-3xl antialiased w-full text-center mb-10 font-bold">
-        {" "}
-        Your characters{" "}
+        Your characters
       </h1>
       <CharactersSearch initialCharacters={characters} />
     </div>

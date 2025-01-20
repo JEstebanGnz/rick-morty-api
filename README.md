@@ -24,3 +24,5 @@ Este proyecto obtiene la información de la [API Púbica de Rick y Morty](https:
 3. Luego, para correr la app:
 
     npm run dev
+
+## Capturas de pantalla de funcionamiento:

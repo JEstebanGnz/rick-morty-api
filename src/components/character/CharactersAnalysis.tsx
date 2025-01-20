@@ -1,5 +1,4 @@
 "use client";
-
 import { PropertyDropdown } from "../chart/PropertyDropdown";
 import { CharactersPieChart } from "../chart/CharactersPieChart";
 import { Character } from "@/interfaces";
@@ -15,8 +14,11 @@ export const CharactersAnalysis = ({ characters }: Props) => {
   const pieChartData = getPieChartDataFromCharacters(characters, property);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-100">
-      <div className="w-3/5 bg-white p-8 shadow-lg rounded-lg">
+    <div className="flex flex-col items-center justify-start w-full min-h-screen">
+      <div className="w-3/5 p-8 shadow-2xl rounded-lg">
+        <h1 className="text-center text-2xl font-bold mb-10">
+          Character Statistics
+        </h1>
         <PropertyDropdown onPropertyChange={setProperty} />
         <CharactersPieChart chartData={pieChartData} property={property} />
       </div>

@@ -12,8 +12,7 @@ export const CharactersSearch = ({ initialCharacters }: Props) => {
 
   const handleFilter = (filterName: string) => {
     const filtered = initialCharacters.filter((character) =>
-      character.name.toLowerCase().includes(filterName.toLowerCase())
-    );
+      character.name.toLowerCase().includes(filterName.toLowerCase()));
     setFilteredCharacters(filtered);
   };
 
