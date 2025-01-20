@@ -15,7 +15,7 @@ export const CharactersAnalysis = ({ characters }: Props) => {
 
   return (
     <div className="flex flex-col items-center justify-start w-full min-h-screen">
-      <div className="w-3/5 p-8 shadow-2xl rounded-lg">
+      <div className="w-4/5 p-8 shadow-2xl rounded-lg">
         <h1 className="text-center text-2xl font-bold mb-10">
           Character Statistics
         </h1>

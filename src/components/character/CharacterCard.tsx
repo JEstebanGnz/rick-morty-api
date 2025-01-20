@@ -26,7 +26,7 @@ export const CharacterCard = ({character}: Props) => {
             {/* Status*/}
             <div className="absolute top-4 right-4">
               <div className="flex items-center bg-black/70 px-3 py-1 rounded-full">
-                <div className={`w-2 h-2 rounded-full ${statusColor} mr-2`}></div>
+                <div className={`w-2 h-2 rounded-full mr-2 ${statusColor}`}></div>
                 <span className="text-white text-sm font-medium capitalize">{character.status}</span>
               </div>
             </div>

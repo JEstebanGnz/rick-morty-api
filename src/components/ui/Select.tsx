@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
   onChange: (value: string) => void;
   placeholder: string;

@@ -26,3 +26,13 @@ Este proyecto obtiene la información de la [API Púbica de Rick y Morty](https:
     npm run dev
 
 ## Capturas de pantalla de funcionamiento:
+
+Filtrado de personajes
+![Rick and Morty API Screenshot](./public/assets/rick-morty-api-1.png)
+
+Información detallada de personajes
+</br>
+![Rick and Morty API Screenshot](./public/assets/rick-morty-api-2.png)
+
+Análisis de personajes por propiedad
+![Rick and Morty API Screenshot](./public/assets/rick-morty-api-3.png)
