@@ -7,12 +7,6 @@ export default async function Home() {
 
   const characters = await getAllCharacters();
 
-  const output = countCharactersByProperty(characters, "status")
-
-  const chartData = convertCountCharactersObjectToChartStructure(output, "status");
-
-  console.log(chartData);
-
   return (
 
     <div>
