@@ -21,9 +21,13 @@ Este proyecto obtiene la información de la [API Púbica de Rick y Morty](https:
 
     npm install
 
-3. Luego, para correr la app:
+3. Luego, crear el build de producción:
 
-    npm run dev
+    npm run build
+
+4. Finalmente, correr la app:
+
+    npm start
 
 ## Capturas de pantalla de funcionamiento:
 
